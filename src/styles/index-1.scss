@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app {
+  display: flex;
+  flex-direction: column;
+  margin: 24px auto;
+  padding: 0px;
+  max-width: 90%;
+  // background-color: rgba(255, 255, 255, 0.3);
+}
+
+.background-video {
+  display: none;
+}
+
+.header {
+  padding: 12px;
+  background-color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.header--branding {
+  max-width: 250px;
+  display: block;
+}
+
+.copy {
+  padding: 0 20px;
+  background-color: white;
+  border-radius: 0 0 0 8px;
+}
+
+h1 {
+  @apply my-4 text-4xl;
+}
+
+.form {
+  padding: 0 20px;
+  background-color: white;
+  border-radius: 0 0 8px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .app {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    max-width: 80%;
+    margin: 48px auto;
+    padding: 24px;
+    border-radius: 8px;
+    // background-color: rgba(255, 255, 255, 0.3);
+    // background-color: rgba(0, 0, 0, 0.5);
+    // background-color: white;
+  }
+
+  .header {
+    grid-area: 1 / 1 / 2 / 7;
+  }
+
+  .header--branding {
+  }
+
+  .copy {
+    grid-area: 2 / 1 / 7 / 4;
+    padding: 0 24px 24px;
+    color: white;
+    background-color: transparent;
+  }
+
+  h1 {
+    @apply my-4 text-4xl;
+  }
+
+  .form {
+    grid-area: 2 / 4 / 7 / 7;
+    padding: 24px;
+  }
+
+  .background-container {
+    @apply absolute left-0 top-0 h-full w-full;
+    display: block;
+    z-index: -1;
+  }
+
+  .background-video {
+    @apply absolute left-0 top-0 h-full w-full object-cover;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .background-overlay {
+    @apply absolute left-0 top-0 h-full w-full bg-black opacity-50;
+    display: block;
+  }
+}
+
+a {
+  @apply text-blue-500 transition-all hover:text-blue-400 hover:underline;
+}
+
+textarea,
+input {
+  @apply rounded-md border border-gray-300 p-2;
+}
+
+button {
+  @apply rounded-md bg-blue-500 p-2 text-white;
+}

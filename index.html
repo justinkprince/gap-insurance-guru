@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAP Insurance Guru</title>
+    <!-- 7308da9a-1bcf-412b-a8cf-f136dbae3d95 -->
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="header-inner">
+          <img class="header--branding" src="src/assets/logo-2.svg" alt="GAP" />
+          <p class="header-phone">
+            <a href="tel:+18004828770">1-800-482-8770</a>
+          </p>
+        </div>
+      </header>
+
+      <main class="main-container">
+        <div class="main">
+          <div class="copy-container">
+            <div class="copy">
+              <h1>Are you interested in learning more?</h1>
+              <p>
+                We will dedicate a sales person to you and have them reach out
+                to set up a convenient time to chat.
+              </p>
+            </div>
+
+            <div class="background-container-copy">
+              <video class="background-video" autoplay muted loop>
+                <source src="src/assets/water.mp4" type="video/mp4" />
+              </video>
+              <div class="background-overlay"></div>
+            </div>
+          </div>
+
+          <form class="form">
+            <div class="form-fields">
+              <div class="form-field">
+                <div class="form-label-container">
+                  <label
+                    for="name"
+                    class="form-label block text-sm font-medium leading-6 text-gray-900"
+                    >Name</label
+                  >
+                </div>
+                <div class="form-input-container">
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autocomplete="given-name"
+                    class="form-input block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <div class="form-label-container">
+                  <label
+                    for="company"
+                    class="form-label block text-sm font-medium leading-6 text-gray-900"
+                    >Company</label
+                  >
+                </div>
+                <div class="form-input-container">
+                  <input
+                    id="company"
+                    name="company"
+                    type="text"
+                    autocomplete="company"
+                    class="form-input block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <div class="form-label-container">
+                  <label
+                    for="email"
+                    class="form-label block text-sm font-medium leading-6 text-gray-900"
+                    >Email address</label
+                  >
+                </div>
+                <div class="form-input-container">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    class="form-input block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <div class="form-label-container">
+                  <label
+                    for="phone"
+                    class="form-label block text-sm font-medium leading-6 text-gray-900"
+                    >Phone </label
+                  ><span class="form-label-helper">Optional</span>
+                </div>
+                <div class="form-input-container">
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    class="form-input block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="form-controls mt-6 flex items-center justify-end gap-x-6"
+            >
+              <button type="submit" class="btn btn-cta">Let's do it!</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="background-container-main">
+          <video class="background-video" autoplay muted loop>
+            <source src="src/assets/water.mp4" type="video/mp4" />
+          </video>
+          <div class="background-overlay"></div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <p>&copy; 2021 GAP Insurance Guru</p>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+  </body>
+</html>

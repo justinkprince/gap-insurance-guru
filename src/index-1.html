@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAP Insurance Guru</title>
+    <!-- 7308da9a-1bcf-412b-a8cf-f136dbae3d95 -->
+  </head>
+  <body>
+    <div class="background-container">
+      <video class="background-video" autoplay muted loop>
+        <source src="src/assets/water.mp4" type="video/mp4" />
+      </video>
+      <div class="background-overlay"></div>
+    </div>
+
+    <div id="app" class="app">
+      <div class="header">
+        <img class="header--branding" src="src/assets/logo-2.svg" alt="GAP" />
+      </div>
+
+      <div class="copy">
+        <h1>GAP health insurance</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+          molestiae, vitae pariatur rerum quis magnam, similique itaque odit
+          deserunt quo nemo laudantium repudiandae asperiores iste ratione sint
+          minus ea sapiente?
+        </p>
+      </div>
+
+      <form class="form">
+        <div class="space-y-12">
+          <div class="border-b border-gray-900/10 pb-12">
+            <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+              <div class="sm:col-span-4">
+                <label
+                  for="name"
+                  class="block text-sm font-medium leading-6 text-gray-900"
+                  >Name</label
+                >
+                <div class="mt-2">
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autocomplete="given-name"
+                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+              <div class="sm:col-span-4">
+                <label
+                  for="company"
+                  class="block text-sm font-medium leading-6 text-gray-900"
+                  >Company</label
+                >
+                <div class="mt-2">
+                  <input
+                    id="company"
+                    name="company"
+                    type="text"
+                    autocomplete="company"
+                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+              <div class="sm:col-span-4">
+                <label
+                  for="email"
+                  class="block text-sm font-medium leading-6 text-gray-900"
+                  >Email address</label
+                >
+                <div class="mt-2">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 flex items-center justify-end gap-x-6">
+          <button
+            type="button"
+            class="text-sm font-semibold leading-6 text-gray-900"
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<form method="POST" id="form">
+  <input
+    type="hidden"
+    name="access_key"
+    value="7308da9a-1bcf-412b-a8cf-f136dbae3d95"
+  />
+  <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+  <input type="checkbox" name="botcheck" id="" style="display: none" />
+
+  <!-- Custom Form Data -->
+  <input type="email" name="email" required />
+  <input type="text" name="name" required />
+  <input type="text" name="phone" required />
+  <textarea name="message" required></textarea>
+
+  <div class="h-captcha" data-captcha="true"></div>
+
+  <button type="submit">Submit</button>
+
+  <div id="result"></div>
+</form>
