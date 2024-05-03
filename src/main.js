@@ -1,28 +1,13 @@
 import "./styles/index.scss";
 
-const form = document.getElementById("form");
+const form = document.getElementById("contact-form");
 const result = document.getElementById("result");
 const phone = document.getElementById("phone");
 let lastPhoneValue = "";
 
-// 502
-// change to (502)
-// on delete, it's now (502
-
 function maskPhoneNumber(input) {
   // Remove any non-digit characters from the input
   let phoneNumber = input.value.replace(/\D/g, "");
-
-  console.log("input", input.value);
-  console.log("phone number", phoneNumber);
-  console.log("lastPhoneValue", lastPhoneValue);
-  console.log("====================================");
-
-  // if (input.value.length < lastPhoneValue.length) {
-  //   lastPhoneValue = input.value;
-  //   input.value = input.value.substring(0, input.value.length - 1);
-  //   return;
-  // }
 
   lastPhoneValue = input.value;
 
@@ -51,48 +36,46 @@ function maskPhoneNumber(input) {
     formattedNumber += "-" + phoneNumber.substring(6, 10);
   }
 
-  console.log("formattedNumber", formattedNumber, phoneNumber);
-
   input.value = formattedNumber;
 }
 
 phone.addEventListener("input", function (e) {
-  console.log("input", e.target.value);
   maskPhoneNumber(phone);
 });
 
-// form.addEventListener("submit", function (e) {
-//   e.preventDefault();
-//   const formData = new FormData(form);
-//   const object = Object.fromEntries(formData);
-//   const json = JSON.stringify(object);
-//   result.innerHTML = "Please wait...";
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-//   fetch("https://api.web3forms.com/submit", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//       Accept: "application/json",
-//     },
-//     body: json,
-//   })
-//     .then(async (response) => {
-//       let json = await response.json();
-//       if (response.status == 200) {
-//         result.innerHTML = json.message;
-//       } else {
-//         console.log(response);
-//         result.innerHTML = json.message;
-//       }
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//       result.innerHTML = "Something went wrong!";
-//     })
-//     .then(function () {
-//       form.reset();
-//       setTimeout(() => {
-//         result.style.display = "none";
-//       }, 3000);
-//     });
-// });
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait...";
+
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: json,
+  })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        result.innerHTML = json.message;
+      } else {
+        console.log(response);
+        result.innerHTML = json.message;
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      result.innerHTML = "Something went wrong!";
+    })
+    .then(function () {
+      form.reset();
+      setTimeout(() => {
+        result.style.display = "none";
+      }, 3000);
+    });
+});

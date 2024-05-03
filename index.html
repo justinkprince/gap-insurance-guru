@@ -5,7 +5,6 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GAP Insurance Guru</title>
-    <!-- 7308da9a-1bcf-412b-a8cf-f136dbae3d95 -->
   </head>
   <body>
     <div class="app">
@@ -37,7 +36,18 @@
             </div>
           </div>
 
-          <form class="form">
+          <form id="contact-form" class="form">
+            <input
+              type="hidden"
+              name="access_key"
+              value="7308da9a-1bcf-412b-a8cf-f136dbae3d95"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="InsuraceGapGuru.com - New Submission"
+            />
+
             <div class="form-fields">
               <div class="form-field">
                 <div class="form-label-container">
@@ -115,12 +125,17 @@
               </div>
             </div>
 
+            <div class="h-captcha-container">
+              <div class="h-captcha" data-captcha="true"></div>
+            </div>
+
             <div
               class="form-controls mt-6 flex items-center justify-end gap-x-6"
             >
               <button type="submit" class="btn btn-cta">Let's do it!</button>
             </div>
           </form>
+          <div id="result" class="result"></div>
         </div>
 
         <div class="background-container-main">
