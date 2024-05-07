@@ -108,15 +108,27 @@ $orange: #fda50d;
 
 // Footer
 .footer {
-  padding: 12px;
   background-color: white;
 }
 
 .footer-inner {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
   padding: 12px;
+}
+
+.footer-contact {
+  width: 100%;
+  text-align: center;
+  background-color: $blue-dark;
+  color: white;
+  padding: 12px;
+
+  a {
+    color: $orange;
+  }
 }
 
 // Forms
